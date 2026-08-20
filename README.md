@@ -118,7 +118,7 @@ and dea.date = vac.date
 WHERE dea.continent is not null
 )
 
--- Fix: Multiply by 100.0 first to avoid MS SQL integer division (getting 0)
+Multiply by 100.0 first to avoid MS SQL integer division (getting 0)
 SELECT *, (Rolling_people_vaccinated * 100.0 / population) AS Popvac
 FROM Popvsvac;
 
